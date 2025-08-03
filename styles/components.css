@@ -1,0 +1,168 @@
+/* Assignment Form */
+.assignment-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.assignment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  justify-content: flex-end;
+}
+
+.current-file {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #16a34a;
+  background-color: #f0fdf4;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbf7d0;
+}
+
+/* Assignment Card */
+.assignment-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.assignment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1);
+  border-color: #2563eb;
+}
+
+.assignment-card.overdue {
+  border-color: #dc2626;
+  background-color: #fef2f2;
+}
+
+.assignment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.assignment-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.4;
+  flex: 1;
+  margin-right: 16px;
+}
+
+.assignment-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.assignment-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.assignment-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.assignment-deadline,
+.assignment-created {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overdue-text {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.overdue-badge {
+  background-color: #dc2626;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.assignment-file {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.file-download-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-download-btn:hover {
+  background-color: #e5e7eb;
+  color: #1f2937;
+}
+
+@media (max-width: 480px) {
+  .assignment-card {
+    padding: 16px;
+  }
+  
+  .assignment-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .assignment-title {
+    margin-right: 0;
+  }
+  
+  .assignment-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
